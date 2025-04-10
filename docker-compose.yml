@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  refusal_tracker_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: refusal_tracker_bot
+    restart: always
+    volumes:
+      - ./logs:/app/logs        # Проброс логов
+      - ./refusal_tracker.db:/app/refusal_tracker.db  # Проброс базы данных
+    environment:
+      - TG_TOKEN=${TG_TOKEN}  # Переменная окружения для токена бота
