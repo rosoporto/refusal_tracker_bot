@@ -11,8 +11,20 @@ wheels/
 .venv
 
 # Logs dir and files
-log/
+logs/
 *.log
 
-#Database files
+#Database files and dir
+data/
 *.db
+*.sqlite
+
+# App ignore files
+.git
+.gitignore
+
+# Scripts files
+*.sh
+
+# Other
+README.md

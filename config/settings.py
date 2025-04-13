@@ -73,6 +73,6 @@ config = Config(
         log_level=os.getenv("LOG_LEVEL", "INFO")
     ),
     database=DB_Settings(
-        db_url=os.getenv("DATABASE_URL", "sqlite:///refusal_tracker.db")
+        db_url=os.getenv("DATABASE_URL")
     )
 )

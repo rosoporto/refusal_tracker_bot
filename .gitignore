@@ -11,10 +11,11 @@ wheels/
 .venv
 
 # Logs dir and files
-log/
+logs/
 *.log
 
 #Database files
+data/
 *.db
 
 #SnapShot files
