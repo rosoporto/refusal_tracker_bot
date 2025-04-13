@@ -63,8 +63,8 @@ pip install -r requirements.txt
 
 ```text
 TG_TOKEN=YOUR_TELEGRAM_BOT_TOKEN
-DATABASE_URL=YOUR_DB. Example: sqlite:///refusal_tracker.db
-LOG_FILE=PATH_TO_SAVE_LOGS. Example: logslogs/bot.log
+DATABASE_URL=YOUR_DB. Example: sqlite:////app/data/refusal_tracker.sqlite
+LOG_FILE=PATH_TO_SAVE_LOGS. Example: /app/logs/bot.log
 LOG_MAX_BYTES=10485760
 LOG_BACKUP_COUNT=5
 LOG_LEVEL=INFO
@@ -85,16 +85,24 @@ python3 main.py
 ```
 
 
+
 ## Docker
 Если вы хотите запустить бота в Docker, выполните следующие шаги:
 
-1. Создайте образ:
+1. Установите права на файлы `start.sh` и `claen.sh`
 
 ```bash
-docker-compose up --build
+chmod +x start.sh
+chmod +x claen.sh
 ```
 
-2. Остановите контейнер:
+2. Запустите:
+
+```bash
+./start.sh
+```
+
+3. Остановите контейнер:
 
 ```bash
 docker-compose down
